@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #151A1F;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 90px 60px 60px;
+}
+
+/* Tombol kembali */
+.back-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #fff;
+  z-index: 10;
+}
+
+.back-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3d42;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover .back-icon {
+  background: #CDC967;
+  color: #1c1e22;
+  border-color: #CDC967;
+}
+
+.back-label {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+/* Layout utama */
+.detail-wrapper {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.poster-col {
+    width: 340px;
+    flex-shrink: 0;
+}
+
+.poster-img {
+  width: 340px;
+  height: 510px;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+}
+
+.btn-jadwal {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  background: #CDC967;
+  color: #1c1e22;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-jadwal:hover {
+  background: #CDC967;
+}
+
+/* Kolom info */
+.info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Kotak judul: background sama dgn body, hanya border + shadow */
+.title-box {
+  background: #151A1F;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-row h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+  height: 32px;
+  padding: 0 10px;
+
+  border: 1px solid #6b6b6b;
+  border-radius: 999px;
+
+  color: #ccc;
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  flex-shrink: 0;
+}
+
+.genre {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  margin: 10px 0 4px;
+}
+
+.score {
+  color: #CDC967;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Sutradara & Pemeran: tanpa kotak, langsung di background */
+.crew-row {
+  display: flex;
+  gap: 60px;
+}
+
+.crew-label {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin: 0 0 4px;
+}
+
+.crew-value {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Sinopsis: tanpa kotak, langsung di background */
+.sinopsis-title {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+}
+
+.sinopsis-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #d8d8d8;
+  margin: 0;
+}
+
+/* Trailer */
+.trailer-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16/8;
+  cursor: pointer;
+}
+
+.trailer-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trailer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watch-label {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.trailer-video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.trailer-box.playing .trailer-thumb,
+.trailer-box.playing .trailer-overlay {
+  display: none;
+}
+
+.trailer-box.playing .trailer-video {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  body {
+    padding: 90px 20px 40px;
+  }
+  .detail-wrapper {
+    flex-direction: column;
+  }
+  .poster-col {
+    flex: none;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .crew-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+}

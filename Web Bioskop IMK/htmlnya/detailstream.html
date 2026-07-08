@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Streaming</title>
+  <link rel="stylesheet" href="../css/detailstream.css">
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-btn">
+    <span class="back-icon">&larr;</span>
+    <span class="back-label">Kembali</span>
+  </a>
+
+  <main class="detail-wrapper">
+    <div class="poster-col">
+      <img id="posterImg" src="" alt="" class="poster-img">
+      <button class="btn-stream" type="button">Tonton Sekarang</button>
+      <button class="btn-watchlist" type="button" id="watchPartyBtn">Watch Party</button>
+    </div>
+
+    <div class="info-col">
+      <div class="title-box">
+        <div class="title-row">
+          <h1 id="filmTitle"></h1>
+          <span class="rating-badge" id="filmRating"></span>
+        </div>
+        <p class="genre" id="filmGenre"></p>
+        <p class="score" id="filmScore"></p>
+      </div>
+
+      <div class="crew-row">
+        <div class="crew-block">
+          <p class="crew-label">Sutradara</p>
+          <p class="crew-value" id="filmDirector"></p>
+        </div>
+        <div class="crew-block">
+          <p class="crew-label">Pemeran Utama</p>
+          <p class="crew-value" id="filmCast"></p>
+        </div>
+      </div>
+
+      <div class="sinopsis-block">
+        <h2 class="sinopsis-title">Sinopsis</h2>
+        <p class="sinopsis-text" id="filmSinopsis"></p>
+      </div>
+
+      <div class="trailer-box" id="trailerBox">
+        <img id="trailerThumb" src="" alt="" class="trailer-thumb">
+        <div class="trailer-overlay">
+          <button class="play-btn" id="playBtn" type="button" aria-label="Putar trailer">&#9658;</button>
+          <p class="watch-label">Watch Trailer</p>
+        </div>
+        <iframe
+          class="trailer-video"
+          id="trailerVideo"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <script src="../jsnya/films.js"></script>
+  <script src="../jsnya/detailstream.js"></script>
+</body>
+</html>

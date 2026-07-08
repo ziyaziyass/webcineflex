@@ -1,0 +1,175 @@
+body {
+    background-color: #151A1F;
+
+}
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: 600;
+    
+}
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,1) 75%,     /* hitam solid bertahan sampai 75% */
+        rgba(0,0,0,0) 100%     /* baru cepat hilang di 25% terakhir */
+    );
+    padding-bottom: 25px;
+    margin-bottom: -25px;
+}
+.nav-link {
+    color: white !important;
+    font-weight: regular;
+    font-size: 1.25rem;
+}
+.nav-link:hover {
+    color: #4C7D62 !important;
+    font-size: 1.5rem;
+}
+.navbar-nav {
+    gap: 20px;
+}
+.carousel-item {
+    height: 600px;
+    width: 100%;
+    position: relative;
+
+}
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    box-shadow: inset 0 0 100px 20px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+.carousel-item img {
+    height: 600px;
+    width: 800px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: inset 0px -40px 40px rgba(0, 0, 0, 0.35); 
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;      /* dari default 15% jadi ukuran tetap kecil */
+    height: 50px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+.carousel-caption-left {
+    position: absolute;
+    top: 60%;
+    left: 150px;
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 10;
+}
+
+.carousel-caption-left h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);  /* biar teks tetap kebaca di gambar terang */
+    margin: 0;
+}
+.buttoncar {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #CDC967;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.buttoncars {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    border-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+.buttoncars:hover {
+    background-color: white;
+    color: black; 
+    transform: scale(1.05);
+}
+.buttoncar:hover {
+    background-color: #CDC967;
+    color: black; 
+    transform: scale(1.05);  
+}
+.tayang-wrap{
+  --tayang-gap: 128px;
+  --tayang-card-w: 220px;
+  max-width: calc(4 * var(--tayang-card-w) + 3 * var(--tayang-gap) + 120px); 
+  padding: 0 60px;
+}
+.tayang-btn{ width: 44px; height: 44px; z-index: 5; }
+#tayangTrack{
+  transition: transform .5s ease;
+  gap: var(--tayang-gap);
+}
+.tayang-card{
+  width: var(--tayang-card-w);
+  background: #1c1c1c;
+  border: none;
+  position: relative;
+}
+.tayang-card .card-img-top{ aspect-ratio: 2/3; object-fit: cover; }
+.tayang-genre{ color: #4C7D62; font-size: .7rem; }
+.favorite-btn{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.8);
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  z-index:2;
+  transition:background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.favorite-btn:hover{
+  transform:scale(1.08);
+  border-color:#e0546a;
+}
+.favorite-btn.liked{
+  background:#e0546a;
+  border-color:#e0546a;
+  color:#fff;
+}
+.tayang-btn{
+  width: 44px;
+  height: 44px;
+  z-index: 5;
+  background-color: transparent;
+  border: 1px solid #CDC967;
+}
+.tayang-btn:hover{
+  background-color: #CDC967;
+}

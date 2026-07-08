@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151A1F;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  padding: 14px 32px;
+  color: #8a8d94;
+  font-size: 13px;
+  background-color: #151A1F;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background-color: #151A1F;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.logo .cine { color: #ffffff; }
+.logo .flex { color: #b7dc4f; }
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #d8d9dd;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a.active {
+  color: #ffffff;
+  font-weight: 600;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 8px 14px;
+  width: 260px;
+  gap: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  flex: 1;
+}
+
+.search-box svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #333;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #6d7d3f;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #2a2c33;
+}
+
+main {
+  padding: 28px 32px;
+}
+
+h1.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #4a4c55;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 32px;
+}
+
+.tab {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #d8d9dd;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab.active {
+  background-color: #CDC967;
+  color: #1b1c22;
+  font-weight: 600;
+}
+
+.tab:not(.active):hover {
+  background-color: #24252c;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+}
+
+.movie-card {
+  background-color: #151A1F;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+}
+
+.poster-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 190 / 240;
+  background-size: cover;
+  background-position: center;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(20, 21, 26, 0.55);
+  border: 1.5px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.favorite-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 2;
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.favorite-icon.active svg {
+  fill: #e0546a;
+  stroke: #e0546a;
+}
+
+.movie-info {
+  padding: 12px 14px;
+}
+
+.movie-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.movie-duration {
+  font-size: 13px;
+  color: #a9b2c4;
+}
+
+.movie-duration.watched {
+  color: #5b9bd5;
+  text-decoration: underline;
+}

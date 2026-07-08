@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #151A1F;
+  color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 42px 64px;
+}
+
+.back-btn {
+  position: fixed;
+  top: 46px;
+  left: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  z-index: 5;
+}
+
+.back-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3d42;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover .back-icon {
+  background: #CDC967;
+  color: #1c1e22;
+  border-color: #CDC967;
+}
+
+.back-label {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.payment-page {
+  width: min(1180px, 100%);
+  min-height: calc(100vh - 84px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 690px) 380px;
+  gap: 78px;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-panel {
+  width: 100%;
+  padding-top: 42px;
+}
+
+.movie-head {
+  display: grid;
+  grid-template-columns: 136px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.poster {
+  width: 136px;
+  height: 176px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding-top: 7px;
+}
+
+.movie-info h1 {
+  font-size: 30px;
+  line-height: 1.12;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.movie-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.wide-line {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, .64);
+  margin: 18px 0;
+}
+
+.detail-section h2 {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 320px;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.price-section {
+  padding-top: 6px;
+}
+
+.total-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 320px;
+  gap: 20px;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+.total-row strong:last-child {
+  color: #CDC967;
+}
+
+.method-btn {
+  display: block;
+  width: 360px;
+  height: 48px;
+  margin: 32px auto 0;
+  border: none;
+  border-radius: 5px;
+  background: #CDC967;
+  color: #151A1F;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.temporary-summary {
+  width: 380px;
+  min-height: 646px;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 8px;
+  padding: 31px 39px 31px;
+  align-self: center;
+}
+
+.temporary-summary h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.summary-line {
+  height: 1px;
+  background: rgba(255, 255, 255, .55);
+  margin-left: -39px;
+  margin-right: -39px;
+  margin-bottom: 28px;
+}
+
+.summary-line.short {
+  margin: 27px 27px 24px 0;
+}
+
+.summary-block {
+  margin-bottom: 28px;
+}
+
+.summary-block p {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.summary-label {
+  color: rgba(255, 255, 255, .7);
+  margin-bottom: 8px;
+}
+
+.summary-block.seats {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1120px) {
+  body {
+    padding: 28px 24px 44px;
+  }
+
+  .back-btn {
+    position: static;
+    margin-bottom: 22px;
+  }
+
+  .payment-page {
+    width: 100%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .order-panel,
+  .temporary-summary {
+    width: min(100%, 690px);
+    margin: 0 auto;
+  }
+
+  .order-panel {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .movie-head {
+    grid-template-columns: 104px 1fr;
+    gap: 18px;
+  }
+
+  .poster {
+    width: 104px;
+    height: 138px;
+  }
+
+  .movie-info h1 {
+    font-size: 24px;
+  }
+
+  .movie-info p,
+  .detail-row,
+  .summary-block p {
+    font-size: 12px;
+  }
+
+  .detail-row,
+  .total-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .method-btn {
+    width: 100%;
+  }
+}

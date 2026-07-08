@@ -1,0 +1,135 @@
+.auth-card {
+    background: #151A1F;
+    padding: 60px 40px;
+    border-radius: 16px;
+    width: 320px;
+    color: #fff;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.auth-card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.auth-card .subtitle {
+    color: #9a9a9a;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.auth-card label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
+
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    background: #151A1F;
+    border: 1px solid #3a3d42;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.auth-card input::placeholder {
+    color: #6b6b6b;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.checkbox-row label {
+    margin: 0;
+    font-weight: normal;
+    display: inline;
+}
+
+.auth-card a {
+    color: #d4c94a;
+    text-decoration: none;
+}
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 24px;
+    background: #d4c94a;
+    color: #1c1e22;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.auth-card button:hover {
+    background: #c4ba3f;
+}
+
+.auth-card hr {
+    border: none;
+    border-top: 1px solid #3a3d42;
+    margin: 24px 0;
+}
+
+.auth-card .login-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #ccc;
+    margin: 0;
+}
+
+.back-btn {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #fff;
+  z-index: 10;
+
+}
+
+.back-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3d42;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover .back-icon {
+  background: #d4c94a;
+  color: #1c1e22;
+  border-color: #d4c94a;
+}
+.auth-card .back-btn{
+    color : #fff;
+    text-decoration: none;
+}

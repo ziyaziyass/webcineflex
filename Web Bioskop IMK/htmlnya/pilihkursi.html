@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Kursi</title>
+  <link rel="stylesheet" href="../css/pilihkursi.css">
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-btn">
+    <span class="back-icon">↩</span>
+    <span class="back-label">Kembali</span>
+  </a>
+
+  <main class="seat-page">
+    <section class="seat-panel" aria-label="Pilih kursi">
+      <div class="screen">
+        <span>AREA LAYAR</span>
+      </div>
+
+      <div class="seat-map" id="seatMap"></div>
+
+      <div class="seat-rule" aria-hidden="true"></div>
+
+      <div class="legend">
+        <span class="legend-item">
+          <span class="legend-box available"></span>
+          Tersedia
+        </span>
+        <span class="legend-item">
+          <span class="legend-box occupied"></span>
+          Terisi
+        </span>
+        <span class="legend-item">
+          <span class="legend-box selected"></span>
+          Terpilih
+        </span>
+      </div>
+    </section>
+
+    <aside class="summary-panel" aria-label="Ringkasan pembayaran">
+      <div class="movie-summary">
+        <img id="filmPoster" class="summary-poster" src="" alt="">
+        <div class="summary-info">
+          <h1 id="filmTitle"></h1>
+          <p id="filmGenre"></p>
+          <p>CGV Grand Indonesia</p>
+          <p id="filmSchedule"></p>
+        </div>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="selected-head">
+        <h2>Kursi Terpilih</h2>
+        <button id="clearSeats" type="button">Hapus semua</button>
+      </div>
+      <div class="selected-seats" id="selectedSeats"></div>
+
+      <div class="summary-divider"></div>
+
+      <section class="payment-detail">
+        <h2>Detail Pembayaran</h2>
+        <div class="payment-row">
+          <span>Tiket Reguler</span>
+          <span id="ticketFormula"></span>
+          <span id="ticketSubtotal"></span>
+        </div>
+      </section>
+
+      <div class="summary-divider thin"></div>
+
+      <div class="payment-total">
+        <strong>Total Pembayaran</strong>
+        <strong id="paymentTotal"></strong>
+      </div>
+
+      <button class="pay-btn" id="payBtn" type="button">Lanjut Ke Pembayaran</button>
+      <button class="return-btn" type="button" onclick="history.back()">Kembali</button>
+    </aside>
+  </main>
+
+  <script src="../jsnya/films.js"></script>
+  <script src="../jsnya/pilihkursi.js"></script>
+</body>
+</html>

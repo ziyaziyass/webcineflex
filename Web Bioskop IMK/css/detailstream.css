@@ -1,0 +1,36 @@
+@import url("detailfilm.css");
+
+.btn-stream,
+.btn-watchlist {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.btn-stream {
+  background: #d4c94a;
+  color: #1c1e22;
+  border: none;
+}
+
+.btn-stream:hover {
+  background: #c4ba3f;
+}
+
+.btn-watchlist {
+  margin-top: 10px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #3a3d42;
+}
+
+.btn-watchlist:hover {
+  background: #d4c94a;
+  color: #1c1e22;
+  border-color: #d4c94a;
+}

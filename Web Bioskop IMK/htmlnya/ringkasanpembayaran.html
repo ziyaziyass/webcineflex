@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ringkasan Pembayaran</title>
+  <link rel="stylesheet" href="../css/ringkasanpembayaran.css">
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-btn">
+    <span class="back-icon">↩</span>
+    <span class="back-label">Kembali</span>
+  </a>
+
+  <main class="payment-page">
+    <section class="order-panel">
+      <div class="movie-head">
+        <img id="filmPoster" class="poster" src="" alt="">
+        <div class="movie-info">
+          <h1 id="filmTitle"></h1>
+          <p>CGV Grand Indonesia</p>
+          <p>Studio 1</p>
+          <p id="filmSchedule"></p>
+        </div>
+      </div>
+
+      <div class="wide-line"></div>
+
+      <section class="detail-section">
+        <h2>Detail Pesanan</h2>
+        <div class="detail-row">
+          <span>Kursi</span>
+          <span id="seatList"></span>
+        </div>
+        <div class="detail-row">
+          <span>Jumlah Tiket</span>
+          <span id="ticketCount"></span>
+        </div>
+        <div class="detail-row">
+          <span>Tipe Tiket</span>
+          <span>Reguler</span>
+        </div>
+      </section>
+
+      <div class="wide-line"></div>
+
+      <section class="price-section">
+        <div class="detail-row">
+          <span>Harga Tiket</span>
+          <span id="ticketPrice"></span>
+        </div>
+        <div class="detail-row">
+          <span></span>
+          <span id="ticketSubtotal"></span>
+        </div>
+        <div class="detail-row">
+          <span>Biaya Layanan</span>
+          <span id="serviceFee"></span>
+        </div>
+        <div class="detail-row">
+          <span>Diskon</span>
+          <span id="discount"></span>
+        </div>
+      </section>
+
+      <div class="wide-line"></div>
+
+      <div class="total-row">
+        <strong>Total Pembayaran</strong>
+        <strong id="totalPayment"></strong>
+      </div>
+
+      <button class="method-btn" type="button">Pilih Metode Pembayaran</button>
+    </section>
+
+    <aside class="temporary-summary">
+      <h2>Ringkasan Sementara</h2>
+      <div class="summary-line"></div>
+
+      <div class="summary-block">
+        <p class="summary-label">Film</p>
+        <p id="sideFilmTitle"></p>
+      </div>
+
+      <div class="summary-block">
+        <p class="summary-label">Bioskop</p>
+        <p>CGV Grand Indonesia</p>
+      </div>
+
+      <div class="summary-block">
+        <p class="summary-label">Studio</p>
+        <p>Studio 1</p>
+      </div>
+
+      <div class="summary-block">
+        <p class="summary-label">Tanggal</p>
+        <p id="sideDate"></p>
+      </div>
+
+      <div class="summary-block">
+        <p class="summary-label">Jam</p>
+        <p id="sideTime"></p>
+      </div>
+
+      <div class="summary-line short"></div>
+
+      <div class="summary-block seats">
+        <p class="summary-label">Pilih Kursi</p>
+        <p id="sideSeats"></p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="../jsnya/films.js"></script>
+  <script src="../jsnya/ringkasanpembayaran.js"></script>
+</body>
+</html>

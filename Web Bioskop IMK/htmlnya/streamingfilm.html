@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streaming Film</title>
+  <link rel="stylesheet" href="../css/streamingfilm.css">
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-btn" aria-label="Kembali">
+    <span class="back-icon">&larr;</span>
+    <span class="back-label">Kembali</span>
+  </a>
+
+  <main class="stream-page">
+    <section class="player-view" id="playerView">
+      <div class="hero-player" id="heroPlayer">
+        <img id="heroImage" src="" alt="" class="hero-image">
+        <button class="play-control" type="button" aria-label="Putar film">
+          <span class="play-icon">&#9658;</span>
+          <span class="play-text">PLAY</span>
+        </button>
+      </div>
+
+      <article class="movie-panel">
+        <div>
+          <h1 id="movieTitle">100 Meters</h1>
+          <p id="movieDuration"></p>
+        </div>
+        <p id="movieDescription">
+          Bakat alami bertemu tekad tanpa batas. Dua pelari muda menjalani persaingan yang membawa mereka mengejar mimpi dan menemukan makna sejati menjadi seorang juara.
+        </p>
+      </article>
+
+      <div class="section-title-row">
+        <h2>Rekomendasi lainnya</h2>
+        <button class="watch-party-open" type="button" id="openWatchParty">Watch Party</button>
+      </div>
+
+      <section class="recommendation-row" id="recommendationRow" aria-label="Rekomendasi film streaming"></section>
+    </section>
+  </main>
+
+  <script src="../jsnya/films.js"></script>
+  <script src="../jsnya/streamingfilm.js"></script>
+</body>
+</html>
