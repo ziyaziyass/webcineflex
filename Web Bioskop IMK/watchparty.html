@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Party</title>
+  <link rel="stylesheet" href="css/streamingfilm.css">
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-btn" aria-label="Kembali">
+    <span class="back-icon">&larr;</span>
+    <span class="back-label">Kembali</span>
+  </a>
+
+  <main class="stream-page party-mode">
+    <section class="watch-party-view is-active" id="watchPartyView">
+      <aside class="party-card party-summary">
+        <p class="party-kicker">Watch Party</p>
+        <h2 id="partyTitle">100 Meters</h2>
+        <img id="partyPoster" src="" alt="" class="party-poster">
+        <div class="party-meta">
+          <span id="partyGenre">Drama, Sport</span>
+          <span id="partyDuration"></span>
+        </div>
+
+        <label for="roomName">Tuan Rumah</label>
+        <input id="roomName" type="text" value="Anda" readonly>
+
+        <div class="member-list" aria-label="Peserta watch party">
+          <p>Peserta</p>
+          <span><i class="avatar avatar-green"></i>Diane</span>
+          <span><i class="avatar avatar-orange"></i>Mr Ocean</span>
+          <span><i class="avatar avatar-blue"></i>bobby</span>
+          <span><i class="avatar avatar-pink"></i>Jackbo</span>
+        </div>
+
+        <button class="invite-btn" type="button">Undang Teman</button>
+      </aside>
+
+      <div class="party-main">
+        <img id="partyMainImage" src="" alt="" class="party-main-image">
+        <article class="ready-card">
+          <div>
+            <h3>Semua sudah siap?</h3>
+            <p>Klik jika kamu siap untuk menonton</p>
+          </div>
+          <div class="ready-members">
+            <div class="ready-person">
+              <span>Diane</span>
+              <i class="avatar avatar-green"></i>
+              <b>&#10003;</b>
+            </div>
+            <div class="ready-person">
+              <span>Mr Ocean</span>
+              <i class="avatar avatar-orange"></i>
+              <b>&#10003;</b>
+            </div>
+            <div class="ready-person">
+              <span>Bobby</span>
+              <i class="avatar avatar-blue"></i>
+              <b>&#10003;</b>
+            </div>
+            <div class="ready-person">
+              <span>Jackbo</span>
+              <i class="avatar avatar-pink"></i>
+              <b>&#10003;</b>
+            </div>
+          </div>
+          <button class="start-btn" type="button" id="startParty">Mulai</button>
+        </article>
+      </div>
+
+      <aside class="party-card live-chat">
+        <h2>Live Chat</h2>
+        <div class="chat-list">
+          <p><i class="avatar avatar-orange"></i><span><b>Mr Ocean</b>That's from me</span><time>19:45</time></p>
+          <p><i class="avatar avatar-blue"></i><span><b>Bobby</b>dapat tiketnya yapp</span><time>19:46</time></p>
+          <p><i class="avatar avatar-pink"></i><span><b>Jackbo</b>I'm pretty high rn</span><time>19:46</time></p>
+          <p><i class="avatar avatar-blue"></i><span><b>Bobby</b>Tolong coba besarnya</span><time>19:50</time></p>
+          <p><i class="avatar avatar-green"></i><span><b>Diane</b>Mulai woii</span><time>19:50</time></p>
+        </div>
+        <form class="chat-form">
+          <input type="text" placeholder="Ketik pesan...">
+          <button type="submit" aria-label="Kirim pesan">&gt;</button>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <script src="jsnya/films.js"></script>
+  <script src="jsnya/watchparty.js"></script>
+</body>
+</html>

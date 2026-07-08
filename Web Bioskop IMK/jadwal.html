@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilih Jadwal</title>
+<link rel="stylesheet" href="css/jadwal.css">
+</head>
+<body>
+
+  <a href="javascript:history.back()" class="back-btn">
+    <span class="back-icon">↩</span>
+    <span class="back-label">Kembali</span>
+  </a>
+
+  <main class="jadwal-wrapper">
+
+    <div class="film-card" id="filmCard">
+      <img id="filmPoster" src="" alt="" class="film-poster">
+      <div class="film-info">
+        <h1 id="filmTitle"></h1>
+        <p class="film-cinema" id="filmCinema"></p>
+        <p class="film-sinopsis" id="filmSinopsis"></p>
+      </div>
+    </div>
+
+    <section class="pilih-section">
+      <h2 class="section-title">Pilih Tanggal</h2>
+      <div class="option-row" id="tanggalRow"></div>
+    </section>
+
+    <section class="pilih-section waktu-section">
+      <h2 class="section-title">Pilih Waktu</h2>
+      <div class="option-row-flex">
+        <div class="option-row" id="waktuRow"></div>
+        <button class="btn-kursi" id="btnKursi">Pilih Kursi</button>
+      </div>
+    </section>
+
+  </main>
+<script src="jsnya/films.js"></script>
+<script src="jsnya/jadwal.js"></script>
+</body>
+</html>
